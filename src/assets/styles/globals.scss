@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito Sans', sans-serif;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+	background: #fff;
+}
+
+html,
+body,
+#root {
+	height: calc(100vh - env(safe-area-inset-top));
+}
+
+button {
+	outline: none;
+	border: none;
+	background: none;
+	font: inherit;
+	cursor: pointer;
+}
+
+.container-loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}

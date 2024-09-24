@@ -1,0 +1,130 @@
+.wrapper {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    width: 6rem;
+    height: 6rem;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+      height: 100%;
+    }
+  }
+
+  &__button-edit {
+    margin-top: 1rem;
+
+    color: rgb(20, 112, 245);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    text-align: center;
+  }
+}
+
+.field {
+  margin-top: 1rem;
+  position: relative;
+
+  &__label {
+    padding: 0.5rem 1rem;
+
+    color: rgb(25, 26, 29);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.08px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+
+    width: 100%;
+    border-radius: 0.875rem;
+    background: rgb(239 239 240);
+    border: 2px solid rgb(239 239 240);
+    padding: 0.75rem 1rem;
+
+    font-family: inherit;
+    color: rgb(25, 26, 29);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+
+    &:focus {
+      background: #fff;
+      border-color: rgba(20, 112, 245, 0.48);
+      border-radius: 0.875rem;
+    }
+  }
+
+  &__textarea {
+    outline: none;
+    font-family: inherit;
+
+    padding: 1rem 1rem 1.5rem 1rem;
+    width: 100%;
+    border: 1px solid rgba(142, 142, 147, 0.14);
+    border-radius: 0.875rem;
+
+    color: rgb(25, 26, 29);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    text-transform: capitalize;
+
+    min-height: 7.785rem;
+  }
+
+  &__button-copy {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    display: grid;
+    place-items: center;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+      color: rgb(20, 112, 245);
+    }
+  }
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+
+  margin-top: auto;
+  margin-bottom: 0;
+
+  &__button-delete {
+    --color: rgb(246, 73, 73);
+    --background: rgba(142, 142, 147, 0.14);
+  }
+}
+
+.invalid_feedback {
+  color: #e74c3c;
+  padding-inline: 1rem;
+}

@@ -1,0 +1,33 @@
+.navigation {
+	background: #fff;
+	border-radius: 16px 16px 0 0;
+	padding-block: 16px;
+	
+	&-header {
+		display: flex;
+		align-items: center;
+		column-gap: 32px;
+		padding-inline: 16px;
+		padding-bottom: 8px;
+		
+		width: 100%;
+		overflow-x: auto;
+
+		border-radius: 16px;
+
+		&__button {
+			color: #0000004d;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 24px;
+
+			&.active {
+				color: #000;
+			}
+		}
+	}
+
+	&-screen {
+		padding-inline: 8px;
+	}
+}

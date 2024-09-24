@@ -1,0 +1,22 @@
+.Toastify__toast-container {
+	transform: translateX(0);
+	width: calc(100% - 28px);
+}
+
+.Toastify__toast-container--top-right {
+	top: 14px;
+	left: 14px;
+}
+
+.Toastify__toast-container--bottom-center {
+	left: 14px;
+	bottom: 14px;
+}
+
+.Toastify__toast {
+	border-radius: 14px;
+}
+
+.Toastify__close-button {
+	display: none;
+}

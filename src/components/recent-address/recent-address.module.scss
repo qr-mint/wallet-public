@@ -1,0 +1,52 @@
+.history-card {
+  display: grid;
+  grid-template-columns: 2.625rem 1fr auto;
+  column-gap: 0.625rem;
+
+  padding: 0.875rem 1rem;
+
+  border-bottom: 1px solid #d2d3d9;
+  width: 100%;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__icon {
+    width: 2.625rem;
+    height: 2.625rem;
+    flex-shrink: 0;
+
+    img {
+      border-radius: 1000px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    row-gap: 0.25rem;
+
+    &-title {
+      color: #1a1a1a;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: normal;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: calc(100vw - 8rem);
+    }
+
+    &-amount {
+      color: #666;
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}

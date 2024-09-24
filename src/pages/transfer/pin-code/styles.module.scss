@@ -1,0 +1,87 @@
+.wrapper {
+  padding: 1rem;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+  width: 100vw;
+  overflow: hidden;
+
+  &__icon {
+    svg {
+      width: 3rem;
+      height: 3rem;
+      flex-shrink: 0;
+    }
+  }
+
+  &__loading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  &__title {
+    margin-top: 1rem;
+
+    color: rgb(40, 40, 45);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.26px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-top: 0.5rem;
+
+    color: rgb(142, 142, 147);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+
+    span {
+      color: #1470f5;
+    }
+  }
+
+  &__hash {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.copy {
+  margin-right: 5px;
+  cursor: pointer;
+  svg {
+    fill: black;
+    width: 21px;
+    height: 21px;
+  }
+}
+
+.actions {
+  margin-top: auto;
+  margin-bottom: 0;
+
+  display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+  width: 100%;
+}
+
+.loader {
+  div {
+    border: 8px solid rgb(20, 112, 245);
+    border-color: rgb(20, 112, 245) transparent transparent transparent;
+  }
+}

@@ -1,0 +1,1 @@
+export const MIN_COINS_FOR_SWAP = 2;

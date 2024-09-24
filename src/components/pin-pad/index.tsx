@@ -1,0 +1,1 @@
+export { PinPad } from './pin-pad';

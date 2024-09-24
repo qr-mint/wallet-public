@@ -1,0 +1,91 @@
+.amount-field {
+	padding-inline: 1rem;
+
+	display: grid;
+	grid-template-columns: 2.5rem 1fr 2.5rem;
+	align-items: center;
+
+	column-gap: 1rem;
+
+	&__button {
+		width: 2.5rem;
+		height: 2.5rem;
+		display: grid;
+		place-items: center;
+		flex-shrink: 0;
+
+		border: 1px solid rgba(20, 112, 245, 0.08);
+		border-radius: 0.875rem;
+
+		&.hidden {
+			visibility: hidden;
+		}
+
+		svg {
+			flex-shrink: 0;
+			width: 1.5rem;
+			height: 1.5rem;
+			color: rgb(20, 112, 245);
+		}
+
+		span {
+			color: rgb(20, 112, 245);
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 22px;
+			letter-spacing: -0.43px;
+		}
+	}
+
+	&__main {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 0.5rem;
+		position: relative;
+	}
+
+	&__input {
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 28px;
+		letter-spacing: -0.26px;
+		text-align: center;
+
+		width: 100%;
+		outline: none;
+		border: none;
+		background: none;
+		z-index: 1;
+
+		&.hidden {
+			opacity: 0;
+		}
+
+		&.copy {
+			position: absolute;
+			top: 8px;
+			left: 50%;
+			transform: translateX(calc(-50% - -1.875rem));
+		}
+
+		&-prefix {
+			text-transform: uppercase;
+			color: #8e8e93;
+			font-weight: 500;
+			font-size: 1.5rem;
+			line-height: 28px;
+			letter-spacing: -0.26px;
+		}
+	}
+
+	&__conversion {
+		color: rgb(142, 142, 147);
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 22px;
+		letter-spacing: -0.43px;
+		text-transform: uppercase;
+	}
+}

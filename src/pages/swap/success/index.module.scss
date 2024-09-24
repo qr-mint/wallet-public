@@ -1,0 +1,48 @@
+@import '@/assets/styles/colors';
+
+.success {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+  font-weight: 500;
+
+  &__icon {
+    svg {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+    font-size: 32px;
+    line-height: 28px;
+    letter-spacing: -0.26px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-top: 8px;
+    color: $GreyDefault;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+  }
+}
+
+.actions {
+  margin-top: auto;
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+}
+
+.svg {
+  color: $GreyDefault;
+}

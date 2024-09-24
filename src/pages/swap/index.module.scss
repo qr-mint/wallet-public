@@ -1,0 +1,171 @@
+@import '@/assets/styles/colors';
+
+.page {
+  display: flex;
+  flex-flow: column;
+  background: $BackgroundPrimary;
+  height: 100%;
+  padding: 16px;
+}
+
+.swap-wrapper {
+  position: relative;
+
+  &__button-exchange {
+    position: absolute;
+    top: 164px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    border: 1px solid $GreyPrimary100;
+    background: $WhiteDefault;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $GreyPrimaryBlue;
+    }
+  }
+}
+
+.swap {
+  padding: 16px 16px 15px;
+  background: $WhiteDefault;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid rgb(244, 246, 248);
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    margin-bottom: 16px;
+
+    &__left {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+    }
+
+    &__image {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    &__info {
+      display: flex;
+      flex-flow: column;
+
+      span {
+        &:nth-child(1) {
+          color: $BlackDefault;
+        }
+
+        &:nth-child(2) {
+          color: $GreyDefault;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: -0.15px;
+        }
+      }
+    }
+
+    &__button-max {
+      color: $GreyPrimaryBlue;
+      border-radius: 14px;
+      border: 1px solid $GreyPrimary100;
+      background: $WhiteDefault;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+
+  &-main {
+    display: flex;
+    flex-flow: column;
+
+    &__field {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -0.26px;
+      height: 28px;
+      text-align: center;
+      width: 70%;
+      margin: 0 auto;
+      outline: none;
+      border: none;
+      background-color: inherit;
+    }
+
+    &__conversion {
+      text-align: center;
+      margin-top: 8px;
+      color: $GreyDefault;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: -0.43px;
+    }
+
+    &__subtitle {
+      margin-top: 16px;
+      color: $BlackDefault;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: -0.43px;
+    }
+  }
+}
+
+.exchangeAmount {
+  margin: 23.5px auto;
+}
+
+.swapBottom {
+  border-bottom: none;
+  border-radius: 0 0 16px 16px;
+}
+
+.errorMessage {
+  padding: 5px 16px;
+  color: $Red;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+}
+
+.button {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.toValue {
+  margin: 23.5px auto;
+}
+
+.tippyContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $WhiteDefault;
+  gap: 12px;
+  border-radius: 8px;
+  padding: 12px;
+  max-width: 200px;
+  box-shadow: 0 1px 3px rgba($BlackDefault, 0.12), 0 1px 2px rgba($BlackDefault, 0.24);
+}

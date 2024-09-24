@@ -1,0 +1,130 @@
+.seed-phrase {
+  padding: 1rem 2rem 2.5rem 2rem;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  &__title {
+    color: rgb(25, 26, 29);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.38px;
+  }
+
+  &__subtitle {
+    margin-top: 0.5rem;
+
+    color: rgb(142, 142, 147);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+  }
+}
+
+.field {
+  margin-top: 2rem;
+
+  &.field__invalid {
+    .field__input {
+      border: 2px solid red;
+    }
+    .field__feedback {
+      color: red;
+      font-size: 12px;
+    }
+  }
+
+  &__label {
+    padding-block: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    column-gap: 0.625rem;
+
+    span {
+      color: rgb(25, 26, 29);
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.08px;
+      text-transform: uppercase;
+    }
+
+    button {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+    font-family: inherit;
+
+    width: 100%;
+
+    border-radius: 0.875rem;
+    background: rgb(239 239 240);
+    border: 2px solid rgb(239 239 240);
+
+    color: rgb(25, 26, 29);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+
+    padding: 1rem 1rem 1.5rem 1rem;
+
+    height: 7.875rem;
+
+    transition: 0.2s ease;
+
+    &:focus {
+      border: 2px solid rgba(20, 112, 245, 0.48);
+      background: #fff;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0.375rem;
+
+    color: rgb(25, 26, 29);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.08px;
+  }
+
+  &__feedback {
+    font-size: 0.875rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    color: red;
+  }
+}
+
+.navigation {
+  margin-top: auto;
+  margin-bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__back-button {
+    display: grid;
+    place-items: center;
+
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.875rem;
+    background: rgba(142, 142, 147, 0.14);
+    opacity: 0.5;
+  }
+
+  &__next-button {
+    width: 11rem;
+  }
+}

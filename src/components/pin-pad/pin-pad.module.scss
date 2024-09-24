@@ -1,0 +1,74 @@
+.pin-pad {
+	&__title {
+		color: rgb(25, 26, 29);
+		font-size: 24px;
+		font-weight: 700;
+	}
+}
+
+.field {
+	margin-top: 1rem;
+
+	&__label {
+		padding-block: 0.5rem;
+
+		display: flex;
+		align-items: center;
+		column-gap: 0.625rem;
+
+		span {
+			color: rgb(25, 26, 29);
+			font-size: 0.75rem;
+			font-weight: 400;
+			line-height: 18px;
+			letter-spacing: -0.08px;
+			text-transform: uppercase;
+		}
+
+		button {
+			display: grid;
+			place-items: center;
+
+			svg {
+				width: 1rem;
+				height: 1rem;
+				flex-shrink: 0;
+			}
+		}
+	}
+
+	&-inputs {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1rem;
+
+		&__input {
+			outline: none;
+			border: none;
+
+			border-radius: 0.875rem;
+			background: rgb(239 239 240);
+			border: 2px solid rgb(239 239 240);
+
+			color: rgb(25, 26, 29);
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 22px;
+			letter-spacing: -0.43px;
+
+			padding: 0.625rem 1rem;
+
+			max-width: 4.875rem;
+			width: 100%;
+
+			text-align: center;
+
+			transition: 0.2s ease;
+
+			&:focus {
+				border: 2px solid rgba(20, 112, 245, 0.48);
+				background: #fff;
+			}
+		}
+	}
+}

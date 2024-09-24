@@ -1,0 +1,113 @@
+.address {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+.field {
+	display: flex;
+	flex-flow: column;
+
+	&__after {
+		display: flex;
+		align-items: center;
+		column-gap: 12px;
+	}
+
+	&__qr-button {
+		display: grid;
+		place-items: center;
+
+		svg {
+			width: 16px;
+			height: 16px;
+		}
+	}
+	
+	&__feedback {
+		font-size: 0.875rem;
+		padding-left: 1rem;
+		padding-bottom: 0.5rem;
+		color: red;
+	}
+}
+
+.tokens {
+	display: flex;
+	flex-flow: column;
+}
+
+.token {
+	display: grid;
+	grid-template-columns: 2.5rem auto 3.25rem;
+	align-items: center;
+	column-gap: 0.625rem;
+	padding: 0.625rem 1rem;
+
+	&__image {
+		width: 2.5rem;
+		height: 2.5rem;
+		flex-shrink: 0;
+		grid-area: 1 / 1 / 3 / 2;
+	}
+
+	&__name {
+		color: rgb(25, 26, 29);
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 22px;
+		letter-spacing: -0.43px;
+		grid-area: 1 / 2 / 2 / 3;
+		text-transform: capitalize;
+	}
+
+	&__symbol {
+		grid-area: 2 / 2 / 3 / 3;
+		color: rgb(142, 142, 147);
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: -0.15px;
+	}
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+
+	&__label {
+		color: rgb(25, 26, 29);
+		font-size: 0.75rem;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: -0.08px;
+		text-transform: uppercase;
+	}
+
+	&__button {
+		color: rgb(20, 112, 245);
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 18px;
+		letter-spacing: -0.08px;
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+
+.actions {
+	margin-top: auto;
+	margin-bottom: 0;
+	padding: 1rem;
+
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.recent-addresses {
+	display: flex;
+	flex-flow: column;
+	row-gap: 0.25rem;
+}

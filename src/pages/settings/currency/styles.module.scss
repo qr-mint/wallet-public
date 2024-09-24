@@ -1,0 +1,36 @@
+.currencies {
+	display: flex;
+	flex-flow: column;
+}
+
+.currency {
+	padding: 1.125rem 1rem;
+	display: grid;
+	grid-template-columns: 1fr 0.875rem;
+	align-items: center;
+	border-bottom: 1px solid rgb(200 199 203 / 0.25);
+
+	&.disabled {
+		opacity: .5;
+	}
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	&__name {
+		text-align: start;
+		color: rgb(25, 26, 29);
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 22px;
+		letter-spacing: -0.43px;
+	}
+
+	svg {
+		width: 0.875rem;
+		height: 0.875rem;
+		flex-shrink: 0;
+		color: #1470f5;
+	}
+}

@@ -1,0 +1,65 @@
+.message {
+	position: relative;
+	margin-top: 16px;
+	background: #fff;
+	padding: 20px;
+	border-radius: 16px;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		column-gap: 4px;
+
+		svg {
+			color: #d90429;
+			width: 24px;
+			height: 24px;
+		}
+
+		span {
+			font-size: 16px;
+			font-weight: 600;
+		}
+	}
+
+	&__description {
+		font-size: 14px;
+		font-weight: 400;
+		padding: 14px 0;
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 8px;
+		padding-top: 8px;
+		border-top: 1px solid #0000001c;
+	}
+
+	&__close-button {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__button {
+		&-copy {
+			color: rgb(20, 112, 245);
+			font-size: 14px;
+			font-weight: 400;
+		}
+
+		&-info {
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+}

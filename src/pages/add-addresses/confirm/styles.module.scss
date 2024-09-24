@@ -1,0 +1,129 @@
+.seed-phrase {
+  padding: 1rem 2rem 2.5rem 2rem;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  &__title {
+    color: rgb(25, 26, 29);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.38px;
+  }
+
+  &__subtitle {
+    margin-top: 0.5rem;
+
+    color: rgb(142, 142, 147);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+  }
+
+  &__footer {
+    margin-top: auto;
+    margin-bottom: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+  }
+}
+
+.check-mnemonic {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 0 1.5rem 0;
+  background: rgb(244, 246, 248);
+
+  &__title {
+    color: rgb(142, 142, 147);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.43px;
+    text-align: center;
+  }
+
+  &__mnemonic {
+    margin-top: 0.5rem;
+
+    border-radius: 0.75rem;
+    background: rgb(255, 255, 255);
+    padding: 0.5rem 0.75rem;
+
+    width: fit-content;
+    margin-inline: auto;
+
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: -0.43px;
+      text-align: left;
+      text-transform: capitalize;
+      color: rgb(142, 142, 147);
+
+      &:nth-child(2) {
+        margin-left: 0.25rem;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.mnemonics {
+  margin-top: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+
+  &-item {
+    // border: 1px solid rgb(255, 255, 255);
+    // border-radius: 0.75rem;
+    // background: rgb(240, 244, 248);
+
+    height: 2.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(142, 142, 147, 0.14);
+    border-radius: 12px;
+
+    box-shadow: 0px 2px 0px 0px rgba(142, 142, 147, 0.14);
+    background: rgb(255, 255, 255);
+
+    span {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: -0.43px;
+      text-transform: capitalize;
+      color: rgb(25, 26, 29);
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__back-button {
+    display: grid;
+    place-items: center;
+
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.875rem;
+    background: rgba(142, 142, 147, 0.14);
+    opacity: 0.5;
+  }
+
+  &__next-button {
+    width: 11rem;
+  }
+}

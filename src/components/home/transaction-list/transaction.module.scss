@@ -1,0 +1,280 @@
+.transaction-list {
+	margin-top: 8px;
+
+	display: flex;
+	flex-flow: column;
+
+	&__title {
+		text-align: center;
+		padding-block: 14px;
+
+		color: rgb(25, 26, 29);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 22px;
+		letter-spacing: -0.43px;
+	}
+
+	&__loading {
+		margin-inline: auto;
+
+		div {
+			width: 54px;
+			height: 54px;
+			border: 6px solid rgb(20, 112, 245);
+			border-color: rgb(20, 112, 245) transparent transparent transparent;
+		}
+	}
+}
+
+.transaction {
+	user-select: none;
+	transition: 200ms ease;
+	padding: 8px;
+	border-radius: 16px;
+
+	display: flex;
+	flex-flow: column;
+	row-gap: 4px;
+
+	background: rgba(0, 0, 0, 0.025);
+
+	&.hidden {
+		background: none;
+	}
+
+	&.hidden & {
+		&-footer {
+			height: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+	}
+
+	&-main {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 40px auto auto;
+		gap: 4px 10px;
+
+		width: 100%;
+
+		cursor: pointer;
+		user-select: none;
+		position: relative;
+
+		&__icon {
+			grid-area: 1 / 1 / 3 / 2;
+
+			width: 40px;
+			height: 40px;
+
+			svg {
+				width: inherit;
+				height: inherit;
+				aspect-ratio: 1 / 1;
+			}
+		}
+
+		&__title {
+			grid-area: 1 / 2 / 2 / 3;
+
+			color: #403948;
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 22px;
+			text-transform: capitalize;
+
+			overflow-x: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		&__datetime {
+			grid-area: 2 / 2 / 3 / 3;
+			position: absolute;
+
+			color: rgba(64, 57, 72, 0.5);
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 22px;
+			white-space: nowrap;
+		}
+
+		&__amount {
+			grid-area: 1 / 3 / 2 / 4;
+
+			color: #403948;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 22px;
+			text-align: right;
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+
+		&__status {
+			grid-area: 2 / 3 / 3 / 4;
+
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 22px;
+			text-align: right;
+			text-transform: capitalize;
+
+			&.confirmed {
+				color: #44b693;
+			}
+
+			&.pending {
+				color: #403948;
+			}
+
+			&.failed {
+				color: #ff5454;
+			}
+		}
+	}
+
+	&-footer {
+		transition: 200ms ease;
+
+		display: flex;
+		flex-flow: column;
+		row-gap: 4px;
+		padding-inline: 8px;
+		border-radius: 8px;
+
+		&__link {
+			color: rgb(20, 112, 245);
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22px;
+			letter-spacing: -0.43px;
+			text-decoration: none;
+		}
+
+		&__actions {
+			margin-top: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&-info {
+		display: flex;
+		flex-flow: column;
+		overflow: hidden;
+
+		border-bottom: 1px solid #aaaaaa1d;
+		padding-block: 6px;
+
+		&:first-child {
+			padding-top: 12px;
+		}
+
+		&__title {
+			color: #aaa;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 18px;
+		}
+
+		&__value {
+			color: #403948;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 20px;
+			overflow-x: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+}
+
+.transaction-skeleton {
+	display: grid;
+	grid-template-columns: 40px auto auto;
+	align-items: center;
+	gap: 4px 10px;
+	cursor: pointer;
+	padding: 10px 8px;
+
+	&__icon,
+	&__name,
+	&__datetime,
+	&__amount svg,
+	&__status svg {
+		background: #dcdcdc;
+		border-radius: 999px;
+		animation: waveColor 2s linear infinite alternate;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__name {
+		grid-area: 1 / 2 / 2 / 3;
+		width: 128px;
+		height: 16px;
+	}
+
+	&__datetime {
+		grid-area: 2 / 2 / 3 / 3;
+		width: 48px;
+		height: 14px;
+	}
+
+	&__amount {
+		grid-area: 1 / 3 / 2 / 4;
+		display: flex;
+		justify-content: flex-end;
+
+		svg {
+			width: 48px;
+			height: 14px;
+		}
+	}
+
+	&__status {
+		grid-area: 2 / 3 / 3 / 4;
+
+		display: flex;
+		justify-content: flex-end;
+
+		svg {
+			width: 48px;
+			height: 14px;
+		}
+	}
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+		flex-shrink: 0;
+
+		grid-area: 1 / 1 / 3 / 2;
+
+		border-radius: 999px;
+
+		svg {
+			color: #fff;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@keyframes waveColor {
+	0%,
+	100% {
+		fill: #dcdcdc; /* Серый цвет */
+		background: #dcdcdc;
+	}
+	50% {
+		fill: #f5f5f5; /* Светлый серый цвет */
+		background: #f5f5f5;
+	}
+}

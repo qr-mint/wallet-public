@@ -1,0 +1,79 @@
+.pin-pad-wrapper {
+	padding: 1rem;
+}
+
+.wrapper {
+	padding-inline: 1rem;
+}
+
+.field {
+	margin-top: 1rem;
+	position: relative;
+
+  &__header {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+	&__label {
+
+		color: rgb(25, 26, 29);
+		font-size: 0.75rem;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: -0.08px;
+		text-transform: uppercase;
+	}
+
+	&__textarea {
+		outline: none;
+		font-family: inherit;
+
+		padding: 1rem 1rem 1.5rem 1rem;
+		width: 100%;
+		border: 1px solid rgba(142, 142, 147, 0.14);
+		border-radius: 0.875rem;
+
+		color: rgb(25, 26, 29);
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: -0.43px;
+
+		min-height: 7.785rem;
+
+		&.address {
+			min-height: auto;
+			height: 6rem;
+		}
+	}
+
+	&__button-copy {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+
+		display: grid;
+		place-items: center;
+
+		svg {
+			width: 1.5rem;
+			height: 1.5rem;
+			flex-shrink: 0;
+			color: rgb(20, 112, 245);
+		}
+	}
+
+	&__button-info {
+    display: grid;
+    place-items: center;
+		svg {
+			color: rgb(20, 112, 245);
+			width: 24px;
+			height: 24px;
+		}
+	}
+}

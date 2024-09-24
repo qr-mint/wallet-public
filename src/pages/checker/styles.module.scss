@@ -1,0 +1,15 @@
+.wrapper {
+	padding: 1.875rem 1.25rem;
+}
+
+.exit-button {
+	display: grid;
+	place-items: center;
+	float: right;
+
+	svg {
+		width: 1.5rem;
+		height: 1.5rem;
+		flex-shrink: 0;
+	}
+}

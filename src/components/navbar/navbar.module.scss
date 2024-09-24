@@ -1,0 +1,44 @@
+
+.navbar{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	padding-top: 12px;
+padding-bottom: 20px;
+	background: #f0efef;
+	border-radius: 16px 16px 0 0;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	&__link {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 4px;
+
+		&.active & {
+			&-icon {
+				color: #000;
+			}
+			
+			&-label {
+				color: #000;
+			}
+		}
+
+		&-icon{
+			color: rgba(64, 57, 72, 0.75);
+				width: 24px;
+				height: 24px;
+		}
+
+		&-label{
+			font-size: 14px;
+			color: rgba(64, 57, 72, 0.75);
+		}
+	}
+}

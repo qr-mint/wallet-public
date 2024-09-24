@@ -1,0 +1,54 @@
+.switch {
+  width: 3.25rem;
+  height: 2rem;
+  border-radius: 1rem;
+
+  background: rgb(255, 84, 84);
+
+  position: relative;
+
+  &.checked {
+    background: rgb(20, 112, 245);
+  }
+
+  &.checked & {
+    &__circle {
+      right: 0.125rem;
+      left: auto;
+
+      svg {
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    left: 0.125rem;
+    top: 0.125rem;
+    border-radius: 999rem;
+
+    width: 1.75rem;
+    height: 1.75rem;
+    background: #fff;
+    display: grid;
+    place-items: center;
+
+    transition: 200ms ease;
+
+    svg {
+      width: 0.625rem;
+      height: 0.625rem;
+      flex-shrink: 0;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

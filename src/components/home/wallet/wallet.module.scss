@@ -1,0 +1,65 @@
+@import '@/assets/styles/colors';
+
+.wallet {
+	position: relative;
+	overflow-x: hidden;
+
+	padding: 16px;
+	border-radius: 20px;
+	background: linear-gradient(300.94deg, #399df5 -40.82%, #3faafa 90.49%);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: -48px;
+		transform: translateY(-50%);
+
+		width: 208px;
+		height: 178px;
+
+		background-image: url('../../../assets/icons/wallet/logo.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&.detailed {
+		background: linear-gradient(300.94deg, rgba(57, 157, 245, 0.1) -40.82%, rgba(63, 169, 250, 0.1) 90.49%);
+	}
+
+	&.detailed {
+		&::before {
+			display: none;
+			background: none;
+		}
+	}
+
+	&__actions {
+		position: relative;
+		z-index: 10;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 14px;
+	}
+}
+
+.loading {
+	margin-top: 16px;
+	margin-inline: auto;
+}
+.tippyContainer {
+	display: flex;
+	background-color: $WhiteDefault;
+	gap: 6px;
+	border-radius: 8px;
+	padding: 12px;
+	max-width: 200px;
+	box-shadow: 0 1px 3px rgba($BlackDefault, 0.12), 0 1px 2px rgba($BlackDefault, 0.24);
+}
+
+.cross {
+	width: 24px;
+	height: 24px;
+}
